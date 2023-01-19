@@ -1,0 +1,34 @@
+# Reigo Raudsepp
+
+import pygame # pygame importimine
+
+pygame.init() # pygame käivitamine
+
+screen=pygame.display.set_mode([300,500]) # akna tekitamine suurusega 300x300
+pygame.display.set_caption("Foor - Reigo Raudsepp") # aknale nime andmine
+screen.fill([0, 0, 0]) # aknale taustavärvi andmine
+
+pygame.draw.rect(screen, [255, 255, 255], [100, 25, 100, 250], 1) # Teeb valge ristküliku
+pygame.draw.circle(screen, [255, 0, 0], [150, 70], 35, 0) # Punane ring üleval
+pygame.draw.circle(screen, [255, 255, 0], [150, 150], 35, 0) # Kollane ring keskel
+pygame.draw.circle(screen, [0, 255, 0], [150, 230], 35, 0) # roheline ring all
+
+# Post ja posti all olev kolmnurk, mille sees on Eesti lipp
+pygame.draw.rect(screen, [255, 255, 255], [144, 275, 15, 100], 0) # Post
+
+pygame.draw.line(screen, [255, 255, 255], [143, 375], [45, 415], 1) # Kolmnurk
+pygame.draw.line(screen, [255, 255, 255], [159, 375], [260, 415], 1) # Kolmnurk
+pygame.draw.line(screen, [255, 255, 255], [45, 415], [260, 415], 1) # Kolmnurk
+
+
+
+
+pygame.display.flip() # akna värksendamine
+
+run = True # loop, et ekraan jääks
+while run:
+ for event in pygame.event.get():
+   if event.type == pygame.QUIT:
+     run =False
+
+pygame.quit()
