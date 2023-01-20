@@ -20,8 +20,10 @@ pygame.draw.line(screen, [255, 255, 255], [143, 375], [45, 415], 1) # Kolmnurk
 pygame.draw.line(screen, [255, 255, 255], [159, 375], [260, 415], 1) # Kolmnurk
 pygame.draw.line(screen, [255, 255, 255], [45, 415], [260, 415], 1) # Kolmnurk
 
-
-
+# Eesti lipp
+pygame.draw.rect(screen, [0, 0, 255], [143, 375, 17,14], 0) # sinine
+pygame.draw.rect(screen, [0, 0, 0], [143, 388, 17,14], 0) # must
+pygame.draw.rect(screen, [255, 255, 255], [143, 402, 17,14], 0) # valge
 
 pygame.display.flip() # akna värksendamine
 
