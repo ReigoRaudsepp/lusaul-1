@@ -1,0 +1,57 @@
+# Reigo Raudsepp
+
+import pygame
+
+pygame.init()
+
+screen=pygame.display.set_mode([500,500]) # ekraani suuruse muutmine
+pygame.display.set_caption("Lumemees - Reigo Raudsepp") # akna nime muutmine
+screen.fill([51, 204, 255]) # tausta värvi muutmine
+
+pygame.draw.circle(screen, [255, 255, 255], [150, 80], 35, 0) # Pea
+pygame.draw.circle(screen, [255, 255, 255], [150, 145], 50, 0) # keha
+pygame.draw.circle(screen, [255, 255, 255], [150, 220], 60, 0) # jalad
+pygame.draw.circle(screen, [0, 0, 0], [140, 80], 5, 0) # esimene silm
+pygame.draw.circle(screen, [0, 0, 0], [160, 80], 5, 0) # teine silm
+pygame.draw.polygon(screen, [255, 102, 0], [[150, 105], [145, 90], [155, 90]]) # nina
+
+pygame.draw.circle(screen, [0, 0, 0], [150, 130], 3, 0) # esimene nööp
+pygame.draw.circle(screen, [0, 0, 0], [150, 145], 3, 0) # teine nööp
+pygame.draw.circle(screen, [0, 0, 0], [150, 160], 3, 0) # kolmas nööp
+
+pygame.draw.line(screen, [255,255,255], [185,125], [220,160], 15) # esimene käsi
+pygame.draw.line(screen, [255,255,255], [110,125], [60,160], 15) # teine käsi
+
+pygame.draw.line(screen, [0,0,0], [110, 55], [190, 55], 4) # kaabu
+pygame.draw.rect(screen, [0,0,0], [120, 25, 60, 30]) # kaabu
+
+pygame.draw.line(screen, [0,0,0], [60, 65], [60, 245], 5) # harja vars
+pygame.draw.rect(screen, [153, 51, 0], [40, 245, 45, 35]) # hari
+
+pygame.draw.circle(screen, [255, 255, 0], [450, 35], 35, 0) # päike
+pygame.draw.line(screen, [255, 255, 0], [410, 35], [370, 40], 3) # päikese kiir
+pygame.draw.line(screen, [255, 255, 0], [410, 55], [370, 65], 3) # päikese kiir
+pygame.draw.line(screen, [255, 255, 0], [420, 65], [370, 85], 3) # päikese kiir
+pygame.draw.line(screen, [255, 255, 0], [430, 75], [370, 100], 3) # päikese kiir
+# Esimene pilv
+pygame.draw.circle(screen, [255,255,255], [350, 60], 25, 0)
+pygame.draw.circle(screen, [255,255,255], [335, 45], 25, 0)
+pygame.draw.circle(screen, [255,255,255], [320, 60], 25, 0)
+# Teine pilv
+pygame.draw.circle(screen, [255,255,255], [270, 85], 25, 0)
+pygame.draw.circle(screen, [255,255,255], [255, 65], 25, 0)
+pygame.draw.circle(screen, [255,255,255], [245, 85], 25, 0)
+# Kolmas pilv
+pygame.draw.circle(screen, [255,255,255], [350, 200], 25, 0)
+pygame.draw.circle(screen, [255,255,255], [335, 185], 25, 0)
+pygame.draw.circle(screen, [255,255,255], [320, 200], 25, 0)
+
+pygame.display.flip() # värskendab akna
+
+run = True # loop, et ekraan püsiks
+while run:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run =False
+
+pygame.quit()
